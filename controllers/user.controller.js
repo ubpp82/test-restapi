@@ -1,5 +1,9 @@
 var get = function(req, res, next) {
-  return res.json({message: 'users get'});
+  try {
+    return res.json({message: 'users get'});
+  } catch(e) {
+    next(e);
+  }
 }
 
 module.exports = get;
