@@ -1,11 +1,9 @@
-import express from 'express'
-import {get} from '../../controllers/v1/user.controller'
+var express = require('express');
+var get = require('../controllers/user.controller');
 
-const router = express.Router()
+var router = express.Router()
 
 router.route('/')
-  .get(
-    get
-  )
+  .get(get);
 
-export default router
+module.exports = router;
